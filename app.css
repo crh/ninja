@@ -1,0 +1,59 @@
+#page {
+    width: 90%; /* arbitrarily choosen, as a result from trial and error. */
+    margin: 36px auto;
+
+    border: 1px solid  #897048;
+    border-style: dotted;
+}
+
+.blog {
+
+    margin: 0 auto 53px;
+    width: 93.75%; /* 900px / 960px*/
+
+    border: 1px solid  #897048;
+    border-style: dotted;
+}
+
+.blog .main {
+    float: left;
+    width: 62.8888889% /* 556px / 900px */
+}
+
+.blog .other {
+    float: right;
+    width: 36.7777778%; /* 331px / 900px */
+}
+
+body {
+    background-color: #DCDBD9;
+    color: #2C2C2C;
+    font: normal 100% Cambria, Georgia, serif;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 1.5em; /* 24px / 16 px: target / context font size = h1 targetted / reseted body font size */
+    font-style: italic;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.25em; /* 20px / 16 px: target / context font size = h1 targetted / reseted body font size */
+}
+
+h1 a {
+    color: #747474;
+    font: bold 0.458333333333333em Calibri, Optima, Arial, sans-serif; /*11px / 24px*/
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#results li.pass {
+  color: green;
+}
+
+#results li.fail{
+  color: red;
+}
