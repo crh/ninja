@@ -41,3 +41,4 @@ outer();
 assert(typeof inner === undefined, 'inner is not in global scope.');
 
 // scoping and function
+assert(true, 'true');
