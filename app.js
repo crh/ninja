@@ -1,8 +1,13 @@
 $(document).ready(function(){
     var REST_URI = 'http://141.66.8.240:8081/aas/organizations';
-    var xhr = $.ajax({
+
+    $.ajax({
+      type: 'GET',
       url: REST_URI,
-      dataType: 'json'
+      dataType: 'json',
+      xhrFields: {
+        withCredentials: true
+      }
     })
     .done(function(data) {
       console.log('data: ', data);
@@ -16,7 +21,6 @@ $(document).ready(function(){
       console.log('finsihed: ', data);
     });
 
-//    var REST_URI = 'https://api.github.com';
     var REST_URI = 'https://api.github.com';
     var xhr = $.ajax({
       url: REST_URI,
