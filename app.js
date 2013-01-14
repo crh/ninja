@@ -65,11 +65,11 @@ var findPersonById = function(id) {
     console.log('data: ', data);
     $('.message').append('<div>' + JSON.stringify(data) + '</div>');
     $('.message').append('<div>Updating snoopy...</div>');
-    data.title = 'msc';
+    data.title = 'bsc';
     console.log(data.title);
     updatePerson(data);
   })
-  .error(function(jqXHR, textStatus, errorThrown) {
+  .fail(function(jqXHR, textStatus, errorThrown) {
     console.log('error: ', textStatus);
     console.log(jqXHR);
     $('#aas').append(jqXHR.statusText + '\n');
@@ -94,6 +94,11 @@ var updatePerson = function(data) {
     console.log('done. ', data);
     $('.message').append('<div>' + data.id + ' is updated</div>');
     $('.message').append('<div>' + JSON.stringify(data) + '</div>');
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    console.log('Fail to update person: ', textStatus);
+    console.log(jqXHR);
+    $('#aas').append(jqXHR.statusText + '\n');
   })
   .always(function(jqXHR) {
     console.log('Send PUT Request is finished: ', jqXHR);
